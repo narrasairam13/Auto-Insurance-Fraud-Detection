@@ -2,4 +2,3 @@ Flask
 render
 pandas
 numpy
-pickle
