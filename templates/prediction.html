@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Claim Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            align-content: center;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        label {
+            flex: 1;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        input{
+            border-radius: 5px;
+        }
+        .submit-button {
+            
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        h2{
+            display: flex;
+            align-items: center;
+            color: rgb(230, 10, 124);
+            padding-left: 50;
+        
+        }
+    .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:green;
+    
+}
+.navbar-left{
+    color:aliceblue;
+    padding-left: 50px;
+    
+}
+.navbar-right{
+    color: aliceblue;
+    padding-right:50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.a{
+    padding: 15px;
+    color: white;
+}
+body{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="navbar">
+            <div class="navbar-left">
+               <h1>AUTO INSURANCE CLAIMS</h1>
+            </div>
+            <div class="navbar-right">
+             <a class="a"href="{{url_for('index')}}" alt="/index">Home</a>
+             <a class="a"href="{{url_for('about')}}" alt="/about">About</a>
+             <a class="a"href="{{url_for('contact')}}" alt="/contact">Contact</a>
+             <a class="a"href="{{url_for('predict')}}" alt="/prediction">Predict</a>
+             </div>
+         </div>
+      
+    <div class="form-container">
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-group">
+                <label for="policy_number">Policy Number:</label>
+                <input type="text" id="policyNumber" name="policy_number">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age">
+            </div>
+            <div class="form-group">
+                <label for="policy_annual_premium">policy_annual_premium:</label>
+                <input type="number" id="policy_annual_premium" name="policy_annual_premium">
+             
+            </div>
+            <div class="form-group">
+                <label for="umbrella_limit">umbrella_limit:</label>
+                <input type="number" id="umbrella_limit" name="umbrella_limit">
+                
+            </div>
+            <div class="form-group">
+                <label for="insured_zip">insured_zip:</label>
+                <input type="number" id="insured_zip" name="insured_zip">
+             
+            </div>
+            <div class="form-group">
+                <label for="capital_gain">capital_gain:</label>
+                <input type="number" id="capital_gain" name="capital_gain">
+                
+            </div>
+            <div class="form-group">
+                <label for="incident_hour_of_the_day">incident_hour_of_the_day:</label>
+                <input type="number" id="incident_hour_of_the_day" name="incident_hour_of_the_day">
+      
+            </div>
+            <div class="form-group">
+                <label for="number_of_vehicles_involved">number_of_vehicles_involved:</label>
+                <input type="number" id="number_of_vehicles_involved" name="number_of_vehicles_involved">
+
+            </div>
+            <div class="form-group">
+                <label for="injury_claim">injury claim</label>
+                <input type="number" id="injury_claim" name="injury_claim">
+
+            </div>
+            <div class="form-group">
+                <label for="bodily_injuries">bodily_injuries:</label>
+                <input type="number" id="bodily_injuries" name="bodily_injuries">
+            
+            </div>
+            <div class="form-group">
+                <label for="vechile_claim">total_claim_amount:</label>
+                <input type="number" id="total_claim_amount" name="total_claim_amount">
+                
+                 
+            </div>
+            
+            <div class="form-group">
+                <label for="auto_year">auto_year:</label>
+                <input type="number" id="auto_year" name="auto_year">
+                 
+            </div>
+            
+            <button type="submit" class="submit-button">Submit Claim</button>
+        </form>
+    </div>
+</body>
+</html>
